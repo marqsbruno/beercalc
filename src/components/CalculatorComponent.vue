@@ -62,6 +62,7 @@ input {
   border-radius: 10px;
   height: 25px;
   box-shadow: 2px 2px gray;
+  text-align: center;
 }
 
 button {
