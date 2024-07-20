@@ -8,12 +8,16 @@ const result = ref(0)
 const handleCount = () => {
   const CONVERT_ML = 1000
   result.value = (price.value * CONVERT_ML) / volume.value
+  if (!result.value) {
+    result.value = 0
+  }
 }
 </script>
 
 <template>
   <header>
-    <h1>Beer calculator</h1>
+    <h1>Beer</h1>
+    <h1>calculator</h1>
   </header>
 
   <main>
@@ -21,7 +25,7 @@ const handleCount = () => {
       <form>
         <div class="input-container">
           <label for="volume">Volume em ml </label>
-          <input type="number" name="volume" id="volume" v-model="volume" />
+          <input type="number" name="volume" id="volume" min="0" v-model="volume" />
         </div>
         <div class="input-container">
           <label for="price">Preço </label>
@@ -37,10 +41,21 @@ const handleCount = () => {
 </template>
 
 <style scoped>
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Monofett', monospace;
+  font-weight: 400;
+  font-size: 40px;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 
 .input-container {
@@ -60,17 +75,20 @@ main {
 
 input {
   border-radius: 10px;
-  height: 25px;
+  height: 27px;
   box-shadow: 2px 2px gray;
   text-align: center;
+  font-size: medium;
 }
 
 button {
-  margin-bottom: 10px;
+  margin: 15px;
   width: 50%;
-  height: 30px;
+  height: 35px;
   border-radius: 50px;
   box-shadow: 5px 5px gray;
   align-self: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
 }
 </style>

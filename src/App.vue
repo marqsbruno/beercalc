@@ -10,8 +10,9 @@ import CalculatorComponent from './components/CalculatorComponent.vue'
 
 <style scoped>
 main {
-  margin: 20px;
+  margin: 50px;
   border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
   border-radius: 10px;
   padding: 15px;
   background-color: white;
@@ -21,5 +22,7 @@ main {
   align-items: center;
   align-self: center;
   width: max-content;
+
+  font-family: 'Courier New', Courier, monospace;
 }
 </style>
