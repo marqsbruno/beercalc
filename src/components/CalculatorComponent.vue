@@ -32,7 +32,7 @@ const handleCount = () => {
           <input type="number" name="price" id="price" min="0" step="0.01" v-model="price" />
         </div>
       </form>
-      <button @click="handleCount">Go</button>
+      <button @click="handleCount">GO</button>
     </div>
     <div class="result">
       <h2>R$ {{ result.toFixed(2).toString().replace('.', ',') }} por litro</h2>

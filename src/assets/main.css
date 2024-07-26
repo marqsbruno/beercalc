@@ -9,5 +9,5 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: linear-gradient(#fffceb 5%, #ffda0a 15%);
+  background: linear-gradient(#fffceb 10%, #ffda0a 15%);
 }
